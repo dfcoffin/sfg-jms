@@ -14,6 +14,7 @@ public class SfgJmsApplication {
         ActiveMQServer server = ActiveMQServers.newActiveMQServer(new ConfigurationImpl()
                 .setPersistenceEnabled(false)
                 .setJournalDirectory("target/data/journal")
+                .setSecurityEnabled(false)
                 .addAcceptorConfiguration("invm", "vm://0"));
 
         server.start();
